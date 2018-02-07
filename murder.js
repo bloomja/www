@@ -7,12 +7,7 @@ function setup () {
 	fill(255,255,100)
 	stroke(255,255,100)
 	
-	input1 = createInput()
+	var input1 = createInput()
 	input.position(10, 10)
-	
-	
-}
-
-function draw () {
 	
 }
