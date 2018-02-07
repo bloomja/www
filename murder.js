@@ -10,4 +10,7 @@ function setup () {
 	var input1 = createInput()
 	input1.position(10, 10)
 	
+	var button1 = createButton("Add player!")
+	button1.position(input1.x + input1.width, 10)
+	
 }
