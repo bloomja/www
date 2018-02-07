@@ -1,5 +1,5 @@
 
-var listOfPlayers, input1, button1
+var players, input1, button1
 
 function setup () {
 	
@@ -9,7 +9,7 @@ function setup () {
 	fill(255,255,100)
 	stroke(255,255,100)
 	
-	listOfPlayers = readTextFile("/murder_players.csv")
+	players = readTextFile("/murder_players.csv")
 	
 	input1 = createInput()
 	input1.position(10, 10)
@@ -22,7 +22,9 @@ function setup () {
 
 function addPlayer () {
 	
-	
+	for (var i = 0; i < players.length; i++) {
+		text(players[i], 10, 50 * i + 50)
+	}
 	
 }
 
