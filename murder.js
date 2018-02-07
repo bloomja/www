@@ -22,6 +22,7 @@ function setup () {
 
 function addPlayer () {
 	
+	text(players.length, 100, 100)
 	for (var i = 0; i < players.length; i++) {
 		text(players[i], 10, 50 * i + 50)
 	}
