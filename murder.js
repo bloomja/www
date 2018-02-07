@@ -8,6 +8,6 @@ function setup () {
 	stroke(255,255,100)
 	
 	var input1 = createInput()
-	input.position(10, 10)
+	input1.position(10, 10)
 	
 }
