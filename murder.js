@@ -7,7 +7,7 @@ function setup () {
 	fill(255,255,100)
 	stroke(255,255,100)
 	
-	text("Add a player!", 0, 25)
+	text("Add a player!", 5, 25)
 	
 }
 
