@@ -16,7 +16,7 @@ function setup () {
 	
 	button1 = createButton("Add player!")
 	button1.position(input1.x + input1.width + 10, 10)
-	button1.mouseClicked(addPlayer)
+	button1.mousePressed(addPlayer)
 	
 }
 
