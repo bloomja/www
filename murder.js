@@ -1,4 +1,6 @@
 
+var listOfPlayers, input1, button1
+
 function setup () {
 	
 	createCanvas(windowWidth, windowHeight)
@@ -7,10 +9,37 @@ function setup () {
 	fill(255,255,100)
 	stroke(255,255,100)
 	
-	var input1 = createInput()
+	listOfPlayers = readTextFile("/murder_players.csv")
+	
+	input1 = createInput()
 	input1.position(10, 10)
 	
-	var button1 = createButton("Add player!")
-	button1.position(input1.x + input1.width, 10)
+	button1 = createButton("Add player!")
+	button1.position(input1.x + input1.width + 10, 10)
+	button1.mouseClicked(addPlayer)
 	
+}
+
+function addPlayer () {
+	
+	
+	
+}
+
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
 }
