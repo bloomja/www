@@ -36,7 +36,7 @@ function setup () {
 
 function addPlayer () {
 	
-	if (!input1.value() === "") {
+	if (input1.value()) {
 		players.append(input1.value())
 		save(players, 'murder_players.txt')
 	}
