@@ -1,5 +1,5 @@
 
-var players, input1, button1, buttonArray
+var players, input1, button1
 
 function preload () {
 	
@@ -24,11 +24,25 @@ function setup () {
 	button1.size(windowWidth/2 - 30)
 	button1.mousePressed(addPlayer)
 	
-	var numRows = players.length / 5
+	var numCols = 5
+	var numRows = players.length / numCols
+	var buttonArray = []
+	var btnWidth = windowWidth/numCols - 10 * (numCols+1)
+	var btnHeight = windowHeight/numRows - input1.height - 10 * (numRows+2)
 	
 	for (var i = 0; i < players.length; i++) {
 		
+		var newBtn = createButton(players[i])
 		
+		if (i == 0) {
+			newBtn.position(10, input1.height + 10)
+		} else if (i % numCols != 0) {
+			newBtn.position(buttonArray[i-1].x + btnWidth + 10, buttonArray[i-1].y)
+		} else {
+			newBtn.position(buttonArray[i-5].x, buttonArray[i-5].y + btnHeight + 10)
+		}
+		
+		newBtn.size(btnWidth, btnHeight)
 		
 	}
 	
