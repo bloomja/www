@@ -43,6 +43,8 @@ function setup () {
 		}
 		
 		newBtn.size(btnWidth, btnHeight)
+		newBtn.mousePressed(addPlayer())
+		buttonArray.append(newBtn)
 		
 	}
 	
