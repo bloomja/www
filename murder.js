@@ -3,8 +3,7 @@ var players, input1, button1
 
 function preload () {
 	
-	players = loadStrings("murder_players.csv")
-	console.log(players)
+	players = loadStrings("murder_players.txt")
 	
 }
 
@@ -24,5 +23,11 @@ function setup () {
 	button1 = createButton("Add player!")
 	button1.position(input1.x + input1.width + 10, 10)
 	button1.mousePressed(addPlayer)
+	
+}
+
+function addPlayer () {
+	
+	
 	
 }
