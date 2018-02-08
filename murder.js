@@ -3,8 +3,8 @@ var players, input1, button1
 
 function preload () {
 	
-	var csv = loadStrings("murder_players.csv")
-	console.log(csv)
+	players = loadStrings("murder_players.csv")
+	console.log(players)
 	
 }
 
