@@ -25,7 +25,7 @@ function setup () {
 	button1.mousePressed(addPlayer)
 	
 	var numCols = 5
-	var numRows = players.length / numCols
+	var numRows = ceil(players.length / numCols)
 	var buttonArray = []
 	var btnWidth = windowWidth/numCols - 10 * (numCols+1)
 	var btnHeight = windowHeight/numRows - input1.height - 10 * (numRows+2)
