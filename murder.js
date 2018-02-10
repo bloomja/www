@@ -28,7 +28,7 @@ function setup () {
 	var numRows = ceil(players.length / numCols)
 	var buttonArray = []
 	var btnWidth = windowWidth/numCols - 10 * (numCols+1)
-	var btnHeight = windowHeight/numRows - input1.height - 10 * (numRows+2)
+	var btnHeight = windowHeight/numRows - input1.height - 10 * (numRows+3)
 	
 	for (var i = 0; i < players.length; i++) {
 		
