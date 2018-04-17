@@ -5,8 +5,8 @@ function setup() {
 	background(50,50,50)
 	textSize(30)
 	
-	slider = createSlider(0,2000,1000,1)
-	slider.position(20,20)
+	slider = createSlider(0,2000,1000,10)
+	slider.position(windowWidth/2,windowHeight/2)
 	
 }
 
@@ -17,7 +17,7 @@ function draw() {
 	stroke(100, 50, 90)
 	fill(100, 50, 90)
 	
-	text(slider.value(), 20 + slider.width + 20, 20)
+	text(slider.value(), slider.x + slider.width + 20, slider.y + 15)
 	
 	var sum = 0;
 	for (var i = 0; i < slider.value(); i++) {
@@ -25,6 +25,6 @@ function draw() {
 			sum += i;
 		}
 	}
-	text(sum, 20, 50);
+	text(sum, slider.x + slider.width/2, slider.y + slider.height + 20);
 	
 }
