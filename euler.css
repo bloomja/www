@@ -1,0 +1,40 @@
+body {background-color: lightCyan;}
+
+section                { display: block; overflow-x: auto;
+											 	 box-shadow: 0.5em 0.5em 2.5em rgba(0,0,0,0.5);
+												 user-select: none; -ms-user-select: none;
+												 border: 1px solid #777777; border-left: 1em solid #77CCFF;
+												 border-top-right-radius: 1em; border-bottom-right-radius: 1em;
+												 transition: border-left 0.5s ease-out; }
+section:hover          { border-left: 1em solid #7777FF; -webkit-touch-callout: none; }
+section b              { text-transform: uppercase; }
+section ul             { list-style: square; }
+section.problem i,
+section.algorithm i    { font-weight: bold; color: #333333; }
+section.inactive       { background: #FF3333; color: #FFFFFF; }
+section.notsolved      { background: #FF0000; color: #FFFFFF; }
+section.notsolved h1   { color: #000000; }
+section.changelog span.entry,
+section.other     span { display: inline-block; width: 9em; white-space: nowrap;
+												text-align: right; padding-right: 1em; }
+section.latest    span { display: inline-block; width: 8em; white-space: nowrap;
+												text-align: right; padding-right: 2em; }
+section.algorithm code { background: #F3F3F3; color: #000000; padding: 0; margin: 0; }
+section.code      code,
+section.live      code { background: #EEEEEE; color: #000000; padding: 0.1em; }
+
+td.open      { background: transparent; color: #333333; padding: 0 0.2em; }
+td.queued    { background: #DDDDDD; color: #333333; padding: 0 0.2em; }
+td.solved    { background: #DDDD33; color: #333333; padding: 0 0.2em; font-weight: bold; }
+td.euleronly { background: #9999FF; color: #333333; padding: 0 0.2em; font-weight: bold; }
+td.completed { background: #009900; color: #DDFFDD; padding: 0 0.2em; font-weight: bold; }
+td.notgood   { background: #FF7700; color: #333333; padding: 0 0.2em; font-weight: bold; }
+td.notsolved { background: #FF0000; color: #DDFFDD; padding: 0 0.2em; font-weight: bold; }
+td.blocked   { background: #000000; color: #DDDDDD; padding: 0 0.2em; font-weight: bold; }
+td.current   { font-weight: normal; }
+td.latest    { color: #DD3333; animation: blinker 3s linear infinite; }
+
+table.heatmap td   { text-align: center; border: 1px solid #000000; padding: 0; width: 2.2em; }
+table.heatmap td * { display: block; border: 1px solid transparent; width: 95%; }
+table.heatmap a    { color: inherit; text-decoration: none; }
+table.heatmap a:hover { border: 1px solid #DDDDDD; }
