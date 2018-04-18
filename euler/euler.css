@@ -1,12 +1,14 @@
-body {background-color: lightCyan;}
+body {background-color: lightCyan; }
+h1 	 {color: seaGreen; }
 
- section                { display: block; overflow-x: auto;
-													box-shadow: 0.5em 0.5em 2.5em rgba(0,0,0,0.5);
-													user-select: none; -ms-user-select: none;
-													border: 1px solid #777777; border-left: 1em solid #77CCFF;
-													border-top-right-radius: 1em; border-bottom-right-radius: 1em;
-													transition: border-left 0.5s ease-out; }
-section:hover          { border-left: 1em solid #7777FF; -webkit-touch-callout: none; }
+section                { display: block; overflow-x: auto; padding: 1em;
+												 box-shadow: 0.5em 0.5em 2.5em rgba(0,0,0,0.5);
+												 user-select: none; -ms-user-select: none;
+												 border: 1px solid #777777; border-left: 2em solid #77CCFF;
+												 border-top-right-radius: 1em; border-bottom-right-radius: 1em;
+												 transition: border-left padding-left 0.5s ease-out; }
+section:hover          { border-left: 1em solid #7777FF; -webkit-touch-callout: none;
+												 padding: 1em; padding-left: 2em; }
 section b              { text-transform: uppercase; }
 section ul             { list-style: square; }
 section.problem i,
@@ -38,3 +40,31 @@ table.heatmap td   { text-align: center; border: 1px solid #000000; padding: 0; 
 table.heatmap td * { display: block; border: 1px solid transparent; width: 95%; }
 table.heatmap a    { color: inherit; text-decoration: none; }
 table.heatmap a:hover { border: 1px solid #DDDDDD; }
+
+table.code    { empty-cells: show; counter-reset: line; width: 100%; margin: 0; padding-top: 1em; padding-bottom: 1em; border: 1px solid #000000; }
+table.code td { padding: 0 0.75em; }
+table.code td:before { counter-increment: line; content: counter(line);
+											color: #CCCCCC;
+											display: inline-block; padding-right: 1em; text-align: right; width: 2em; }
+table.code tr:nth-child(odd)  { background: #F6F9FB; }
+table.code tr:nth-child(even) { background: #FDFDFD; }
+table.code tr:hover           { background: #FFFFCC; transition: background-color 0.8s ease-out; }
+
+code .annotation		{ color: #646464; }
+code .bracket				{ color: #000000; }
+code .deprecated		{ color: #000000; text-decoration: line-through; }
+code .field					{ color: #0000c0; }
+code .keyword				{ color: #7f0055; font-weight: bold; }
+code .localvar			{ color: #6a3e3e; }
+code .operator			{ color: #000000; }
+code .other					{ color: #000000; }
+code .staticfield		{ color: #0000c0; font-style: italic; }
+code .staticfinal		{ color: #0000c0; font-weight: bold; font-style: italic; }
+code .staticmethod	{ color: #000000; font-style: italic; }
+code .string				{ color: #2a00ff; }
+code .dochtml				{ color: #7f7f9f; }
+code .doclink				{ color: #3f3fbf; }
+code .docother			{ color: #3f5fbf; }
+code .doctag				{ color: #7f9fbf; font-weight: bold; }
+code .comment				{ color: #3f7f5f; }
+code .tasktag				{ color: #7f9fbf; font-weight: bold; }
