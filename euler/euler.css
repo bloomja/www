@@ -1,0 +1,17 @@
+body {background-color: lightCyan;}
+
+td.open      { background: transparent; color: #333333; padding: 0 0.2em; }
+td.queued    { background: #DDDDDD; color: #333333; padding: 0 0.2em; }
+td.solved    { background: #DDDD33; color: #333333; padding: 0 0.2em; font-weight: bold; }
+td.euleronly { background: #9999FF; color: #333333; padding: 0 0.2em; font-weight: bold; }
+td.completed { background: #009900; color: #DDFFDD; padding: 0 0.2em; font-weight: bold; }
+td.notgood   { background: #FF7700; color: #333333; padding: 0 0.2em; font-weight: bold; }
+td.notsolved { background: #FF0000; color: #DDFFDD; padding: 0 0.2em; font-weight: bold; }
+td.blocked   { background: #000000; color: #DDDDDD; padding: 0 0.2em; font-weight: bold; }
+td.current   { font-weight: normal; }
+td.latest    { color: #DD3333; animation: blinker 3s linear infinite; }
+
+table.heatmap td   { text-align: center; border: 1px solid #000000; padding: 0; width: 2.2em; }
+table.heatmap td * { display: block; border: 1px solid transparent; width: 95%; }
+table.heatmap a    { color: inherit; text-decoration: none; }
+table.heatmap a:hover { border: 1px solid #DDDDDD; }
