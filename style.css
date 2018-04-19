@@ -1,6 +1,7 @@
 body {background: lightCyan url(images/wave-bg.png) no-repeat center center fixed; 
-			background-size: cover;}
+			background-size: cover; color: cadetBlue; }
 h1 	 {color: seaGreen; }
+h3	 {color: darkSlateGray; }
 
 section                { display: block; overflow-x: auto; padding: 1em;
 												 box-shadow: 0.5em 0.5em 2.5em rgba(0,0,0,0.5);
@@ -56,6 +57,7 @@ table.code tr:nth-child(odd)  { background: #F6F9FB; }
 table.code tr:nth-child(even) { background: #FDFDFD; }
 table.code tr:hover           { background: #FFFFCC; transition: background-color 0.8s ease-out; }
 
+code td							{ color: #000000; }
 code .annotation		{ color: #646464; }
 code .bracket				{ color: #000000; }
 code .deprecated		{ color: #000000; text-decoration: line-through; }
