@@ -1,4 +1,5 @@
-body {background-color: lightCyan; }
+body {background: lightCyan url(wave-bg.png) no-repeat center center fixed; 
+			background-size: cover;}
 h1 	 {color: seaGreen; }
 
 section                { display: block; overflow-x: auto; padding: 1em;
