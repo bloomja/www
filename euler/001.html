@@ -1,9 +1,10 @@
 <html>
 	
 	<head>
-		<link rel="shortcut icon" href="euler.png">
+		<link rel="shortcut icon" href="images/euler.png">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">		
 		<link rel="stylesheet" href="euler.css">
+		<title>Multiples of 3 and 5</title>
 	</head>
 	
 	<body>
@@ -53,13 +54,64 @@
 		<div class="container">
 			<section>
 				<h1>
+					The Problem:
+				</h1>
+				<p>
+					If we list all the natural number below 10 that are multiples of 3 or 5,
+					we get 3, 5, 6 and 9. The sum of these multiples is 23. <br>
+					Find the sum of all the multiples of 3 or 5 below 1000.
+					<br>
+					<br>
+					<a href="https://www.projecteuler.net/problem=1">Original Problem Statement</a>
+				</p>
+			</section>
+		</div>
+		
+		<br>
+		
+		<div class="container">
+			<section>
+				<h1>
+					Explanation:
+				</h1>
+				<p>
+					As you may have seen in the code, I provided two solutions. The linear time solution is the more
+					straightforward one. In this one you simply loop through all possible numbers from 1 to 1000 and
+					check for divisibility using the <a href='https://en.wikipedia.org/wiki/Modular_arithmetic'>modulus operator (%)</a>.
+					If the number is divisible by either 3 or 5, increase the sum. When the loop is over, just print
+					out the sum. <br> The other approach is a bit more complicated. You can think of the final sum
+					by cutting out all the numbers not divisible, and perhaps just count by 3s and 5s. If you look at
+					all multiples of 3, you get the <a href='https://en.wikipedia.org/wiki/Arithmetic_progression'>arithmetic sequence</a>
+					3, 6, 9, 12, &hellip;. Likewise, looking at the multiples of 5, we get 5, 10, 15, &hellip;. Surely,
+					we can find a way to find the sum of each sequence and then add them together! If you remember from
+					high school algebra, you can find the sum of an arithmetic progression by the simple formula:
+				</p>
+				<img class='math' src='images/img001-1.gif' alt='n/2*(a_1+a_n)'>
+				<p>
+					Using this formula, we can easily compute the sum of the multiples of 3 and of 5. If we go ahead
+					and compute this result, surprisingly, it comes up wrong. What did we do wrong? After thinking about
+					it for a while, and maybe listing out the multiples of 3 and 5, we notice that there are common
+					multiples between the two of them. For example, 45 is divisible by both 3 and 5. Therefore, we are
+					counting 45 twice. Looking at all of the numbers that both lists have in common, we get the following
+					15, 30, 45, 60, &hellip;. OMG, it's all multiples of 15! Now, all we have to do is keep our sum from
+					above and subtract the sum of all multiples of 15, using the same formula above. Once, that is
+					implemented, the correct answer should just make its way onto your computer screen.
+				</p>
+			</section>
+		</div>
+		
+		<br>
+		
+		<div class="container">
+			<section>
+				<h1>
 					My Code:
 				</h1>
 				<p>
 					Here is my Java code to find the solution!
 				</p>
 				
-				<pre><code><table class="code">
+				<pre><code><table class='code'>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td><span class='keyword'>public</span> <span class='keyword'>class</span> Solution {</td></tr>
 					<tr><td>&nbsp;</td></tr>
@@ -70,41 +122,42 @@
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
 					<tr><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>public</span> <span class='keyword'>static</span> <span class='keyword'>void</span> boundedSolution(<span class='keyword'>int</span> n) {</td></tr>
-					<tr><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>long</span> startTime = <span class='keyword'>System</span>.currentTimeMillis();</td></tr>
-					<tr><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> sum = 0;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> num3&nbsp;= (n-1)/3;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> num5&nbsp;= (n-1)/5;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> num15 = (n-1)/15;</td></tr>
-					<tr><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += ( 3 +&nbsp;3 *&nbsp;num3) *&nbsp;num3 / 2;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += ( 5 +&nbsp;5 *&nbsp;num5) *&nbsp;num5 / 2;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum -= (15 + 15 * num15) * num15 / 2;</td></tr>
-					<tr><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>long</span> time = <span class='keyword'>System</span>.currentTimeMillis() - startTime;</td></tr>
-					<tr><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>System</span>.out.println(<span class='string'>"Bounded Solution: "</span> + sum);</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>System</span>.out.println(<span class='string'>"Runtime: "</span> + (time/1000) + <span class='string'>"."</span> + (time%1000) + <span class='string'>"s"</span>);</td></tr>
-					<tr><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
-					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>public</span> <span class='keyword'>static</span> <span class='keyword'>void</span> linearSolution(<span class='keyword'>int</span> n) {</td></tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>long</span> startTime = <span class='keyword'>System</span>.currentTimeMillis();</td></tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> sum = 0;</td></tr>
 					<tr><td>&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='comment'>// Loop through all the values from 1 to n</span></td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>for</span> (<span class='keyword'>int</span> i = 0; i &lt; n; i++) {</td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>if</span> (i % 3 == 0 || i % 5 == 0) {</td></tr>
-					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += i;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += i; <span class='comment'>// Only count a number towards the sum if it is divisible by 3 or 5</span></td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>long</span> time = <span class='keyword'>System</span>.currentTimeMillis() - startTime;</td></tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>System</span>.out.println(<span class='string'>"Linear Solution: "</span> + sum);</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>System</span>.out.println(<span class='string'>"Runtime: "</span> + (time/1000) + <span class='string'>"."</span> + (time%1000) + <span class='string'>"s"</span>);</td></tr>
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>public</span> <span class='keyword'>static</span> <span class='keyword'>void</span> boundedSolution(<span class='keyword'>int</span> n) {</td></tr>
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>long</span> startTime = <span class='keyword'>System</span>.currentTimeMillis();</td></tr>
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> sum = 0;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> num3 = (n-1)/3; <span class='comment'>// This represents the number of multiples of 3 there are</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> num5 = (n-1)/5; <span class='comment'>// This represents the number of multiples of 5 there are</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> num15 = (n-1)/15; <span class='comment'>// This represents the number of multiples of 15 there are</span></td></tr>
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += (3 + 3*num3) * num3/2; <span class='comment'>// This should be the sum of all multiples of 3</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += (5 + 5*num5) * num5/2; <span class='comment'>// This should be the sum of all multiples of 5</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum -= (15 + 15*num15) * num15/2; <span class='comment'>// This should be the sum of all multiples of 15</span></td></tr>
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>long</span> time = <span class='keyword'>System</span>.currentTimeMillis() - startTime;</td></tr>
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>System</span>.out.println(<span class='string'>"Bounded Solution: "</span> + sum);</td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>System</span>.out.println(<span class='string'>"Runtime: "</span> + (time/1000) + <span class='string'>"."</span> + (time%1000) + <span class='string'>"s"</span>);</td></tr>
 					<tr><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
@@ -129,9 +182,9 @@
 				<table class="table table-bordered heatmap">
 					<tbody>
 						<tr>
-							<td class="queued"><a href="001.html">1</a></td>
-							<td class="queued">2</td>
-							<td class="queued">3</td>
+							<td class='completed' title='Completed on 4/18/18'><a href="001.html">1</a></td>
+							<td class='queued'>2</td>
+							<td class='queued'>3</td>
 							<td>4</td>
 							<td>5</td>
 							<td>6</td>

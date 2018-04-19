@@ -1,7 +1,7 @@
 <html>
 	
 	<head>
-		<link rel="shortcut icon" href="euler.png">
+		<link rel="shortcut icon" href="images/euler.png">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">		
 		<link rel="stylesheet" href="euler.css">
 	</head>
@@ -62,7 +62,7 @@
 				<table class="table table-bordered heatmap">
 					<tbody>
 						<tr>
-							<td class="queued"><a href="001.html">1</a></td>
+							<td class="completed"><a href="001.html">1</a></td>
 							<td class="queued">2</td>
 							<td class="queued">3</td>
 							<td>4</td>
@@ -761,62 +761,6 @@
 						</tr>
 					</tbody>
 				</table>
-			</section>
-		</div>
-		
-		<br>
-		
-		<div class="container">
-			<section>
-				<h1>
-					My Code:
-				</h1>
-				<p>
-					Here is my Java code to find the solution!
-				</p>
-				
-				<pre>
-	<code>
-		<table class="code">
-			<tr><td>
-				<span class="preprocessor">#include</span> <span class="operator">&lt;</span>iostream<span class="operator">&gt;</span>
-			</td></tr>
-      <tr><td>
-				&nbsp;
-			</td></tr>
-      <tr><td>
-				<span class="comment">// triangular number: <span class="equation" data-equation="\sum{x}=1+2+..+x = x*{\left( x+1 \right)} /2">sum{x}=1+2+..+x = x*(x+1)/2</span><br /></span>
-			</td></tr>
-      <tr><td><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> <span class="function">sum</span>(<span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> x)</td></tr>
-      <tr><td>{</td></tr>
-      <tr><td>  <span class="keyword">return</span> x <span class="operator">*</span> (x <span class="operator">+</span> 1) / 2;</td></tr>
-      <tr><td>}</td></tr>
-      <tr><td>&nbsp;</td></tr>
-      <tr><td><span class="type">int</span> <span class="function">main</span>()</td></tr>
-      <tr><td>{</td></tr>
-      <tr><td>  <span class="type">unsigned</span> <span class="type">int</span> tests;</td></tr>
-      <tr><td>  <span class="function">std::cin</span> <span class="operator">&gt;&gt;</span> tests;</td></tr>
-      <tr><td>  <span class="keyword">while</span> (tests<span class="operator">-</span><span class="operator">-</span>)</td></tr>
-      <tr><td>  {</td></tr>
-      <tr><td>    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> last;</td></tr>
-      <tr><td>    <span class="function">std::cin</span> <span class="operator">&gt;&gt;</span> last;</td></tr>
-      <tr><td>&nbsp;</td></tr>
-      <tr><td>    <span class="comment">// not including that number</span></td></tr>
-      <tr><td>    last<span class="operator">-</span><span class="operator">-</span>;</td></tr>
-      <tr><td>&nbsp;</td></tr>
-      <tr><td>    <span class="comment">// find sum of all numbers divisible by 3 or 5</span></td></tr>
-      <tr><td>    <span class="type">auto</span> sumThree   =  3 <span class="operator">*</span> <span class="function">sum</span>(last /  3);</td></tr>
-      <tr><td>    <span class="type">auto</span> sumFive    =  5 <span class="operator">*</span> <span class="function">sum</span>(last /  5);</td></tr>
-      <tr><td>&nbsp;</td></tr>
-      <tr><td>    <span class="comment">// however, those numbers divisible by 3 AND 5 will be counted twice</span></td></tr>
-      <tr><td>    <span class="type">auto</span> sumFifteen = 15 <span class="operator">*</span> <span class="function">sum</span>(last / 15);</td></tr>
-      <tr><td>&nbsp;</td></tr>
-      <tr><td>    <span class="function">std::cout</span> <span class="operator">&lt;&lt;</span> (sumThree <span class="operator">+</span> sumFive <span class="operator">-</span> sumFifteen) <span class="operator">&lt;&lt;</span> <span class="function">std::endl</span>;</td></tr>
-      <tr><td>  }</td></tr>
-      <tr><td>&nbsp;</td></tr>
-      <tr><td>  <span class="keyword">return</span> 0;</td></tr>
-      <tr><td>}</td></tr>
-</table></code></pre>
 			</section>
 		</div>
 		

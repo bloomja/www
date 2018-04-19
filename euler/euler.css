@@ -1,10 +1,10 @@
-body {background: lightCyan url(wave-bg.png) no-repeat center center fixed; 
+body {background: lightCyan url(images/wave-bg.png) no-repeat center center fixed; 
 			background-size: cover;}
 h1 	 {color: seaGreen; }
 
 section                { display: block; overflow-x: auto; padding: 1em;
 												 box-shadow: 0.5em 0.5em 2.5em rgba(0,0,0,0.5);
-												 user-select: none; -ms-user-select: none;
+												 user-select: none; -ms-user-select: none; background-color: lightCyan;
 												 border: 1px solid #777777; border-left: 2em solid #77CCFF;
 												 border-top-right-radius: 1em; border-bottom-right-radius: 1em;
 												 transition: border-left padding-left 0.5s ease-out; }
@@ -25,6 +25,9 @@ section.latest    span { display: inline-block; width: 8em; white-space: nowrap;
 section.algorithm code { background: #F3F3F3; color: #000000; padding: 0; margin: 0; }
 section.code      code,
 section.live      code { background: #EEEEEE; color: #000000; padding: 0.1em; }
+
+img.math       { display:block; margin: 0 auto; }
+img.math:hover { transform: scale(1.5); }
 
 td.open      { background: transparent; color: #333333; padding: 0 0.2em; }
 td.queued    { background: #DDDDDD; color: #333333; padding: 0 0.2em; }
@@ -69,3 +72,4 @@ code .docother			{ color: #3f5fbf; }
 code .doctag				{ color: #7f9fbf; font-weight: bold; }
 code .comment				{ color: #3f7f5f; }
 code .tasktag				{ color: #7f9fbf; font-weight: bold; }
+
