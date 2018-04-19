@@ -1,0 +1,192 @@
+<html>
+	
+	<head>
+		<link rel="shortcut icon" href="images/euler.png">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">		
+		<link rel="stylesheet" href="../style.css">
+		<title>Even Fibonacci Numbers</title>
+	</head>
+	
+	<body>
+	
+		<div class="container">
+			<header>
+				<nav class="navbar navbar-expand-lg navbar-light" style="background-color: lightBlue">
+					<a class="navbar-brand" href="../index.html">Jonny Bloom</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+						<a class="nav-link" href="home.html">PE Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">The Rest of These Don't Do Anything</a>
+						</li>
+						<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							lol
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
+					</div>
+				</nav>
+			</header>
+		</div>
+		
+		<br>
+		
+		<div class="container">
+			<section>
+				<h1>
+					The Problem:
+				</h1>
+				<p>
+					Each new term in the Fibonacci sequence is generated
+					by adding the previous two terms. By starting with 1
+					and 2, the first 10 terms will be:
+				</p>
+				<img class='math' src='images/img002-1.gif' alt='1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &hellip;'>
+				<p>
+					By considering the terms in the Fibonacci sequence
+					whose values do not exceed four million, find the sum
+					of the even-valued terms.
+					<br>
+					<br>
+					<a href="https://www.projecteuler.net/problem=2">Original Problem Statement</a>
+				</p>
+			</section>
+		</div>
+		
+		<br>
+		
+		<div class="container">
+			<section>
+				<h1>
+					Explanation:
+				</h1>
+				<p>
+					
+				</p>
+			</section>
+		</div>
+		
+		<br>
+		
+		<div class="container">
+			<section>
+				<h1>
+					My Code:
+				</h1>
+				<p>
+					Here is my Java code to find the solution!
+				</p>
+				
+				<pre><code><table class='code'>
+					<tr><td></td></tr>
+					<tr><td><span class='keyword'>public</span> <span class='keyword'>class</span> Solution {</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>public</span> <span class='keyword'>static</span> <span class='keyword'>void</span> main(String[] <span class='parameter'>args</span>) {</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='staticmethod'>solution1</span>(4000000);</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='staticmethod'>solution2</span>(4000000);</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>public</span> <span class='keyword'>static</span> <span class='keyword'>void</span> solution1(<span class='keyword'>int</span> <span class='parameter'>n</span>) {</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>long</span> <span class='localvar'>start</span> = System.<span class='staticmethod'>currentTimeMillis</span>();</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='comment'>// initialize variables</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> <span class='localvar'>sum</span> = 0;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> <span class='localvar'>a</span> = 1;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> <span class='localvar'>b</span> = 1;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='comment'>// Loop until the Fibonacci number exceeds n (4000000)</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>while</span> (<span class='localvar'>b</span> &lt; <span class='parameter'>n</span>) {</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>if</span> (<span class='localvar'>b</span> % 2 == 0) {</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='localvar'>sum</span> += <span class='localvar'>b</span>; <span class='comment'>// Only add it if it's even</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='comment'>// Generate the next Fibonacci number</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> <span class='localvar'>temp</span> = <span class='localvar'>a</span>;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='localvar'>a</span> = <span class='localvar'>b</span>;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='localvar'>b</span> += <span class='localvar'>temp</span>;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>long</span> <span class='localvar'>time</span> = System.<span class='staticmethod'>currentTimeMillis</span>()-<span class='localvar'>start</span>;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.<span class='staticfinal'>out</span>.println(<span class='string'>"First Solution: "</span> + <span class='localvar'>sum</span>);</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.<span class='staticfinal'>out</span>.println(<span class='string'>"Runtime: "</span> + (<span class='localvar'>time</span>/1000) + <span class='string'>"."</span> + (<span class='localvar'>time</span>%1000) + <span class='string'>"s"</span>);</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>public</span> <span class='keyword'>static</span> <span class='keyword'>void</span> solution2(<span class='keyword'>int</span> <span class='parameter'>n</span>) {</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>long</span> <span class='localvar'>start</span> = System.<span class='staticmethod'>currentTimeMillis</span>();</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='comment'>// sum starts at 2 because we're only adding the b values</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> <span class='localvar'>sum</span> = 2;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> <span class='localvar'>a</span> = 2;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> <span class='localvar'>b</span> = 8;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='comment'>// Same looping conditions</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>while</span> (<span class='localvar'>b</span> &lt; <span class='parameter'>n</span>) {</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='localvar'>sum</span> += <span class='localvar'>b</span>; <span class='comment'>// No need to check if it's even</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='comment'>// Generate the next terms</span></td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>int</span> <span class='localvar'>temp</span> = <span class='localvar'>a</span>;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='localvar'>a</span> = <span class='localvar'>b</span>;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='localvar'>b</span> = 4*<span class='localvar'>b</span> + <span class='localvar'>temp</span>;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='keyword'>long</span> <span class='localvar'>time</span> = System.<span class='staticmethod'>currentTimeMillis</span>() - <span class='localvar'>start</span>;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.<span class='staticfinal'>out</span>.println(<span class='string'>"Second Solution: "</span> + <span class='localvar'>sum</span>);</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.<span class='staticfinal'>out</span>.println(<span class='string'>"Runtime: "</span> + (<span class='localvar'>time</span>/1000) + <span class='string'>"."</span> + (<span class='localvar'>time</span>%1000) + <span class='string'>"s"</span>);</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
+					<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+					<tr><td>}</td></tr>
+					<tr><td></td></tr>
+				</table></code></pre>
+			</section>
+		</div>
+		
+		<br>
+		
+		<div class="container">
+			<section id='progress'>
+				<h1>
+					Progress:
+				</h1>
+				<p>
+					Here is my progress in Project Euler. Click on any highlighted number to see my solution to the problem.
+				</p>
+			</section>
+		</div>
+		
+		<br>
+		
+		<script src="heatmap.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	</body>
+	
+</html>

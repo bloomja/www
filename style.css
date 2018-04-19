@@ -66,6 +66,7 @@ code .keyword				{ color: #7f0055; font-weight: bold; }
 code .localvar			{ color: #6a3e3e; }
 code .operator			{ color: #000000; }
 code .other					{ color: #000000; }
+code .parameter			{ color: #6a3e3e; font-style: italic; }
 code .staticfield		{ color: #0000c0; font-style: italic; }
 code .staticfinal		{ color: #0000c0; font-weight: bold; font-style: italic; }
 code .staticmethod	{ color: #000000; font-style: italic; }
