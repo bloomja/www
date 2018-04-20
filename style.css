@@ -29,8 +29,7 @@ section.live      code { background: #EEEEEE; color: #000000; padding: 0.1em; }
 section.index				 { text-align: center; }
 section.index			a	 { color: seaGreen; }
 
-img.math       { display:block; margin: 0 auto; }
-img.math:hover { transform: scale(1.5); }
+img.bigmath       { display:block; margin: 0 auto; }
 
 td.open      { background: transparent; color: #333333; padding: 0 0.2em; }
 td.queued    { background: #DDDDDD; color: #333333; padding: 0 0.2em; }

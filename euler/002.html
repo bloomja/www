@@ -52,7 +52,7 @@
 		<br>
 		
 		<div class="container">
-			<section>
+			<section id='problem'>
 				<h1>
 					The Problem:
 				</h1>
@@ -81,7 +81,39 @@
 					Explanation:
 				</h1>
 				<p>
-					Hi lol
+					There are a few main approaches to this problem, some better than others.
+					I will first go over the most straightforward and intuitive solution, and
+					then the approach that runs quicker (only about 33%) but is a bit harder to come up with. <br>
+					The easiest way to think about this problem is quite literally. The problem
+					asks us the find the sum of all even-valued Fibonacci terms. So, if we loop
+					through the Fibonacci sequence and check which ones are even, we should be
+					good. That is exactly what solution 1 does, and the code is below. <br>
+					On the other hand, maybe you may have thought of only checking the even terms.
+					To do this, we might want to inspect the Fibonacci sequence a bit closer.
+					You may have noticed a pattern, but looking at the sequence, you might suspect
+					that every third term is even. And you would be right! It is easily proven too.
+					An even number can be written as <img class='math' src='images/img002-2.gif' alt='2n' align='middle'>,
+					where <img class='math' src='images/img002-3.gif' alt='n' align='middle'> is an integer;
+					whereas odd numbers can be written as <img class='math' src='images/img002-4.gif' alt='2n+1' align='middle'>.
+					Let's see what happens when you add two odd numbers together: <img class='math' src='images/img002-5.gif' alt='(2m+1)+(2n+1)=2m+2n+2=2(m+n+1)' align='middle'>
+					where <img class='math' src='images/img002-6.gif' alt='m' align='middle'> and <img class='math' src='images/img002-3.gif' alt='n' align='middle'> are integers.
+					In that case, <img class='math' src='images/img002-7.gif' alt='m+n+1' align='middle'> must also be an integer.
+					This shows that the sum of two odd numbers is an even number. The same logic can be
+					used to show that the sum of two evens is an even and the sum of an even number with
+					an odd number is an odd number. Now we have all the tools we need. Our first two terms
+					are odd and even, respectively. We will call this state A&mdash;when our last two terms are odd
+					and even. Next, we add them to get an odd number, and we'll call this state B: (Even, Odd).
+					When we add them, we get to state C: (Odd, Odd). And lastly, adding those will return us
+					back to state A: (Odd, Even). This proves that the <a href='https://en.wikipedia.org/wiki/Parity_(mathematics)'>parity</a>
+					of Fibonacci numbers is cyclic, with evens being every third term.<br>
+					Now we must find a <a href='https://en.wikipedia.org/wiki/Recurrence_relation'>recurrence relation</a>
+					between these odd numbers. It is shown here:
+				</p>
+					<img class='bigmath' src='images/img002-8.gif' alt='F(n)=4*F(n-3)+F(n-6)'>
+				<p>
+					Of course, since the evens are at every third term, this works perfectly and can be verified
+					just by looking at the sequence. Now, we can just implement this in the code. Instead of checking
+					if the numbers are even, just change how we generate the fibonacci numbers to only give us the even ones.
 				</p>
 			</section>
 		</div>
