@@ -29,6 +29,9 @@ for (var i = 0; !done && i < 7; i++) {
 				case 1: td[k].className = 'completed'; td[k].title = 'Completed on 4/18/18';   td[k].innerHTML = '<a href=\'001.html\'>1</a>'; break;
 				case 2: td[k].className = 'completed'; td[k].title = 'Completed on 4/19/18';   td[k].innerHTML = '<a href=\'002.html\'>2</a>'; break;
 				case 3: td[k].className = 'queued';    td[k].title = 'Solution not available'; td[k].innerText = '3';													 break;
+				case 4: td[k].className = 'queued';		 td[k].title = 'Solution not available'; td[k].innerText = '4';													 break;
+				case 5: td[k].className = 'queued';		 td[k].title = 'Solution not available'; td[k].innerText = '5';													 break;
+				case 6: td[k].className = 'queued';		 td[k].title = 'Solution not available'; td[k].innerText = '6';													 break;
 				default: 																																			 td[k].innerText = num;
 			}
 			
