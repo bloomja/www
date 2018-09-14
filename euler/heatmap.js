@@ -20,7 +20,7 @@ for (var i = 0; !done && i < 7; i++) {
 		for (var k = 0; !done && k < 25; k++) {
 			
 			var num = i*100 + j*25 + k + 1;
-			if (num == 625) {
+			if (num == 636) {
 				done = true;
 			}
 			
@@ -43,6 +43,40 @@ for (var i = 0; !done && i < 7; i++) {
 				case 15: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '15';													break;
 				case 16: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '16';													break;
 				case 17: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '17';													break;
+				case 18: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '18';													break;
+				case 19: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '19';													break;
+				case 20: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '20';													break;
+				case 21: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '21';													break;
+				case 22: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '22';													break;
+				case 23: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '23';													break;
+				case 24: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '24';													break;
+				case 25: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '25';													break;
+				case 26: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '26';													break;
+				case 27: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '27';													break;
+				case 28: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '28';													break;
+				case 29: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '29';													break;
+				case 30: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '30';													break;
+				case 31: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '31';													break;
+				case 32: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '32';													break;
+				case 33: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '33';													break;
+				case 34: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '34';													break;
+				case 35: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '35';													break;
+				case 36: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '36';													break;
+				case 37: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '37';													break;
+				case 38: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '38';													break;
+				case 39: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '39';													break;
+				case 40: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '40';													break;
+				case 41: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '41';													break;
+				case 42: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '42';													break;
+				case 43: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '43';													break;
+				case 44: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '44';													break;
+				case 45: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '45';													break;
+				case 46: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '46';													break;
+				case 47: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '47';													break;
+				case 48: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '48';													break;
+				case 49: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '49';													break;
+				case 50: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '50';													break;
+				case 52: td[k].className = 'queued';		td[k].title = 'Solution not available'; td[k].innerText = '52';													break;
 				default: 																																			  td[k].innerText = num;
 			}
 			
