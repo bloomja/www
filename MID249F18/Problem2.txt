@@ -1,0 +1,11 @@
+I would suggest abstracting the following methods in the Employee class: lessThan(), samePay().
+This allows us to change these functions more easily if creating a new class.
+Suppose we would like to create a class SalaryEmployee, we would be override those methods,
+along with the other abstract method, getPay(), and they would be different functions from
+those in the HourlyEmployee class. This is good because it is difficult to compare the pay
+of two employees who are paid differently.
+
+Another concern I have with this code is the equals() method in HourlyEmployee. It seems
+as though the intent was to override the equals() method from Object, but it doesn't do
+so properly. A quick fix would be to change the parameter other to be of type Object, and
+then at every time it is referenced, cast it to an HourlyEmployee.
