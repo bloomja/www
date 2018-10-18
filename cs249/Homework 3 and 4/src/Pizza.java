@@ -6,12 +6,19 @@ public class Pizza {
 	private int numPep;
 	private int numHam;
 	
-	// Constructor
+	// Constructors
 	public Pizza (String size, int cheese, int pep, int ham) {
 		this.size = size;
 		this.numCheese = cheese;
 		this.numPep = pep;
 		this.numHam = ham;
+	}
+	
+	public Pizza (Pizza p) {
+		this.size = p.getSize();
+		this.numCheese = p.getCheese();
+		this.numPep = p.getPepperoni();
+		this.numHam = p.getHam();
 	}
 	
 	// Getter methods
