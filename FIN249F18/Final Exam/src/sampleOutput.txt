@@ -1,0 +1,178 @@
+I am a student with GPS coordinates at (-43.1009, -75.2327).
+I am a faculty member, whose phone number is (315)-1092-9332.
+This is a book store, we've sold 1296 books.
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Count: 5
+Count: 6
+Count: 7
+I am a faculty member, phone number unknown.
+Count: 8
+Count: 9
+Count: 10
+This is a book store, we've sold 1296 books.
+Count: 11
+Count: 12
+I am a faculty member, whose phone number is (315)-1092-9332.
+Count: 13
+I am a student with GPS coordinates at (-43.1009, -75.2327).
+This is a book store, number of books sold unknown.
+I am a faculty member, phone number unknown.
+Count: 14
+I am a faculty member, phone number unknown.
+Count: 15
+Count: 16
+Count: 17
+I am a faculty member, phone number unknown.
+Count: 18
+Count: 19
+Count: 20
+This is a book store, we've sold 1296 books.
+I am a faculty member, phone number unknown.
+Count: 21
+I am a faculty member, phone number unknown.
+Count: 22
+Count: 23
+Count: 24
+I am a faculty member, whose phone number is (315)-1092-9332.
+This is a book store, number of books sold unknown.
+This is a book store, number of books sold unknown.
+Count: 25
+Count: 26
+I am a student with GPS coordinates at (-43.1009, -75.2327).
+This is a book store, number of books sold unknown.
+I am a faculty member, phone number unknown.
+Count: 27
+Count: 28
+I am a faculty member, phone number unknown.
+I am a faculty member, phone number unknown.
+Count: 29
+Count: 30
+This is a book store, we've sold 1296 books.
+This is a book store, number of books sold unknown.
+Count: 31
+Count: 32
+This is a book store, number of books sold unknown.
+Count: 33
+Count: 34
+I am a faculty member, phone number unknown.
+This is a book store, number of books sold unknown.
+Count: 35
+I am a faculty member, phone number unknown.
+Count: 36
+I am a faculty member, whose phone number is (315)-1092-9332.
+This is a book store, number of books sold unknown.
+I am a student, coordinates unknown.
+Count: 37
+Count: 38
+Count: 39
+I am a student with GPS coordinates at (-43.1009, -75.2327).
+This is a book store, number of books sold unknown.
+I am a faculty member, phone number unknown.
+Count: 40
+This is a book store, we've sold 1296 books.
+I am a faculty member, phone number unknown.
+This is a book store, number of books sold unknown.
+Count: 41
+Count: 42
+I am a faculty member, phone number unknown.
+I am a faculty member, phone number unknown.
+I am a student, coordinates unknown.
+I am a student, coordinates unknown.
+I am a faculty member, phone number unknown.
+Count: 43
+Count: 44
+Count: 45
+This is a book store, number of books sold unknown.
+Count: 46
+Count: 47
+Count: 48
+I am a faculty member, whose phone number is (315)-1092-9332.
+This is a book store, number of books sold unknown.
+This is a book store, number of books sold unknown.
+I am a student, coordinates unknown.
+This is a book store, number of books sold unknown.
+This is a book store, number of books sold unknown.
+Count: 49
+I am a faculty member, phone number unknown.
+I am a student, coordinates unknown.
+I am a faculty member, phone number unknown.
+I am a faculty member, phone number unknown.
+Count: 50
+This is a book store, we've sold 1296 books.
+Count: 51
+I am a faculty member, phone number unknown.
+This is a book store, number of books sold unknown.
+Count: 52
+I am a student with GPS coordinates at (-43.1009, -75.2327).
+This is a book store, number of books sold unknown.
+I am a faculty member, phone number unknown.
+Count: 53
+Count: 54
+I am a student, coordinates unknown.
+This is a book store, number of books sold unknown.
+This is a book store, number of books sold unknown.
+Count: 55
+Count: 56
+I am a faculty member, phone number unknown.
+This is a book store, number of books sold unknown.
+I am a faculty member, phone number unknown.
+I am a student, coordinates unknown.
+I am a faculty member, phone number unknown.
+I am a faculty member, phone number unknown.
+I am a faculty member, phone number unknown.
+Count: 57
+Count: 58
+Count: 59
+Count: 60
+I am a faculty member, whose phone number is (315)-1092-9332.
+This is a book store, we've sold 1296 books.
+I am a faculty member, phone number unknown.
+This is a book store, number of books sold unknown.
+This is a book store, number of books sold unknown.
+I am a student, coordinates unknown.
+This is a book store, number of books sold unknown.
+Count: 61
+Count: 62
+Count: 63
+I am a faculty member, phone number unknown.
+I am a student, coordinates unknown.
+I am a faculty member, phone number unknown.
+I am a faculty member, phone number unknown.
+This is a book store, number of books sold unknown.
+Count: 64
+This is a book store, number of books sold unknown.
+This is a book store, number of books sold unknown.
+Count: 65
+I am a student with GPS coordinates at (-43.1009, -75.2327).
+This is a book store, number of books sold unknown.
+I am a faculty member, phone number unknown.
+Count: 66
+I am a student, coordinates unknown.
+I am a student, coordinates unknown.
+Count: 67
+Count: 68
+I am a faculty member, phone number unknown.
+This is a book store, number of books sold unknown.
+Count: 69
+Count: 70
+This is a book store, we've sold 1296 books.
+I am a faculty member, phone number unknown.
+I am a faculty member, phone number unknown.
+I am a student, coordinates unknown.
+I am a faculty member, phone number unknown.
+I am a faculty member, phone number unknown.
+I am a faculty member, phone number unknown.
+Count: 71
+Count: 72
+I am a faculty member, whose phone number is (315)-1092-9332.
+This is a book store, number of books sold unknown.
+This is a book store, number of books sold unknown.
+I am a student, coordinates unknown.
+This is a book store, number of books sold unknown.
+This is a book store, number of books sold unknown.
+This is a book store, number of books sold unknown.
+Count: 73
+Count: 74
